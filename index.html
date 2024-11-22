@@ -449,6 +449,21 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script>
+  // Selektuj sve linkove u meniju
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      // Selektuj collapse element
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Proveri da li je collapse element otvoren
+      if (navbarCollapse.classList.contains('show')) {
+        // Zatvori collapse element
+        navbarCollapse.classList.remove('show');
+      }
+    });
+  });
+</script>
     
   </body>
 </html>
