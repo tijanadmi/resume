@@ -428,6 +428,19 @@ h1, h2, h3, h4, h5,
 					position: relative;
 					// height: 650px;
 					z-index: -1;
+
+					// Lazy loading slike
+    				img {
+        				width: 100%;
+        				height: auto;
+        				display: block;
+        				object-fit: cover;
+        				transition: opacity 0.3s ease-in-out;
+        				opacity: 0; // Početna vrednost za lazy load
+        				&.loaded {
+            				opacity: 1; // Kada se učita slika
+        				}
+    				}
 					.overlay{
 						position: absolute;
 						top: 0;
