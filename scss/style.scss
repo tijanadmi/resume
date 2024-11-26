@@ -357,8 +357,21 @@ h1, h2, h3, h4, h5,
 
 
     .home-slider.owl-carousel .slider-item {
-        height: auto;
+        /*height: auto;*/
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	overflow: hidden;
+    	width: 100%;
     }
+
+	.home-slider.owl-carousel .slider-item .img {
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+	}
+	
 }
 
 
