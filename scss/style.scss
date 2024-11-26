@@ -349,7 +349,7 @@ h1, h2, h3, h4, h5,
     }
 
 	.navbar-toggler {
-        position: fixed;
+        position: fixed !important;
         top: 10px; /* razmak od vrha ekrana */
         right: 15px; /* razmak od desnog ruba ekrana */
         z-index: 10000; /* osiguraj da je dugme iznad svega */
