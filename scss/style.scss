@@ -71,10 +71,10 @@ h1, h2, h3, h4, h5,
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 3;
+	z-index: 999; /* umesto 3 */
 	width: 100%; /* Osiguraj da se navbar širi preko cele širine ekrana */
 	/* Dodaj padding top za razmak između sadržaja i navigacije */
-    padding-top: 10px; /* Povećaj ovo ako je potrebno za bolje poravnavanje */
+    padding-top: 10px 15px; /* Povećaj ovo ako je potrebno za bolje poravnavanje */
 	// padding-top: 30px;
 	@include media-breakpoint-down(md) {
 		background: $black!important;
@@ -224,6 +224,11 @@ h1, h2, h3, h4, h5,
 		}
 	}
 	.navbar-toggler {
+		position: fixed;
+    	top: 10px; /* Razmak od vrha */
+    	right: 15px; /* Razmak sa desne strane */
+    	z-index: 10000; /* Osiguraj da je dugme uvek na vrhu */
+
 		border: none;
 		color: rgba(255,255,255,.5)!important;
 		cursor: pointer;
@@ -337,11 +342,19 @@ h1, h2, h3, h4, h5,
 @media screen and (max-width: 768px) {
     .ftco-navbar-light {
         position: fixed !important; /* Obavezno primeniti fixed poziciju za mobilne uređaje */
-		width: 100%;
-		top: 0;
-		padding-top: 10px;
-
+		top: 0; /* postavi ga na vrh ekrana */
+        left: 0; /* postavi ga na levu stranu */
+        right: 0; /* postavi ga na desnu stranu */
+        z-index: 9999; /* osiguraj da bude ispred drugih elemenata */
     }
+
+	.navbar-toggler {
+        position: fixed;
+        top: 10px; /* razmak od vrha ekrana */
+        right: 15px; /* razmak od desnog ruba ekrana */
+        z-index: 10000; /* osiguraj da je dugme iznad svega */
+    }
+
 
     .home-slider.owl-carousel .slider-item {
         height: auto;
