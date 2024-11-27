@@ -367,7 +367,6 @@ h1, h2, h3, h4, h5,
     }
 
 	.home-slider.owl-carousel .slider-item .img {
-		touch-action: pan-y; /* Omogućava vertikalno skrolovanje */
 		background-size: cover;
 		background-position: center;
 		width: 100%;
@@ -375,6 +374,14 @@ h1, h2, h3, h4, h5,
 	}
 	
 }
+
+.owl-carousel {
+    touch-action: pan-y;
+  }
+
+  .slider-item {
+    overflow: visible;
+  }
 
 
 .hero{
