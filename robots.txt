@@ -1,0 +1,5 @@
+makefile
+Copy code
+User-agent: *
+Allow: /
+Sitemap: https://resume.tdispaces.com/sitemap.xml
